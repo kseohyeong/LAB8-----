@@ -10863,3 +10863,163 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
     margin-left: -15rem;
   }
 }
+
+  /*#page-content-wrapper{
+    .login-form{
+      padding:100px;
+      /*margin:100px;
+    }
+
+    .joinin-form{
+      padding: 100px;
+      /*margin:100px;
+    }
+  }*/
+  
+
+  /*.custom-button{
+    width:80px;
+    height: 50px;
+  }
+}*/
+
+
+
+#page-content-wrapper{      /*moviehome*/
+  #wrapper{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap:1rem;
+  }
+
+  .card{
+    width:350px;
+    border:1px solid #ccc;
+    padding: 10px;
+    margin:10px;
+    text-align:center;
+    cursor:pointer;
+    text-decoration:none;
+    color:#333;
+    display:block;
+  }
+  
+  .card:hover{
+    background-color: #f0f0f0
+  }
+
+  .card img{
+    width: 100%;
+    height: auto;
+  }
+
+  .my-button{
+    background-color:#007bff;
+    color:#fff;
+    padding: 10px 20px;
+    border:none;
+    border-radius: 5px;
+    cursor:pointer;
+    font-size: 16px;
+    font-weight:bold;
+  }
+  .my-button:hover{
+    background-color:#0056b3;
+  }
+}
+
+#page-content-wrapper{
+  .card2{
+    background-color:#f0f0f0;
+    border-radius: 50px;
+    padding: 15px;
+    border:none;
+
+  }
+}
+
+
+#page-content-wrapper{           /*movie개인*/
+  #wrapper1{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+  }
+
+  .card1{
+
+    max-width: 600px;
+    margin: 20px auto;
+    padding:20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display:flex;
+  }
+  .card1 figure{
+    margin-right:20px;
+  }
+
+  .card1 img{
+    max-width: 100%;
+    height:auto;
+  }
+
+  .card1 p{
+    flex:1;
+  }
+
+  .card1{
+    display:grid
+  }
+}
+
+#page-content-wrapper{      /*드라마홈(캐러셀)*/
+  .carousel-caption h3{
+    color:darkgrey;
+  }
+
+  .carousel{
+    max-width:800px;
+    margin:0 auto;
+  }
+}
+
+
+#page-content-wrapper{        /*책 홈*/
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.slider-container {
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 auto;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.slide img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slide h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+}
+
