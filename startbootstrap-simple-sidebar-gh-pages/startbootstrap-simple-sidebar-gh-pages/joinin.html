@@ -17,9 +17,9 @@
             <div class="border-end bg-white" id="sidebar-wrapper">
                 <div class="sidebar-heading border-bottom bg-light">MEDIA</div>
                 <div class="list-group list-group-flush">
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">MOVIE</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">DRAMA</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">BOOK</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="moviehome.html">MOVIE</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="dramahome.html">DRAMA</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="bookhome.html">BOOK</a>
                 </div>
             </div>
             <!-- Page content wrapper-->
@@ -31,13 +31,13 @@
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                                <li class="nav-item active"><a class="nav-link" href="#!">Home</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#!">Link</a></li>
+                                <li class="nav-item active"><a class="nav-link" href="mainhome.html">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="mypage.html">My Page</a></li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login/Logout</a>
                                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#!">로그인하기</a>
-                                        <a class="dropdown-item" href="#!">회원가입하기</a>
+                                        <a class="dropdown-item" href="loginpage.html">로그인하기</a>
+                                        <a class="dropdown-item" href="joinin.html">회원가입하기</a>
                                         <div class="dropdown-divider"></div>
                                         <a class="dropdown-item" href="#!">로그아웃하기</a>
                                     </div>
@@ -55,21 +55,45 @@
                             <input type="text" id="ID" name="ID"></br>
                             <p> </p>
                             <label for = "password">비밀번호 입력:</label>
-                            <input type="text" id="password" name="password"></br>
+                            <input type="text" id="password1" name="password1"></br>
                             <p> </p>
-                            <!--비밀번호 재입력-->
+                            <label for = "password">비밀번호 재입력:</label>
+                            <input type="text" id="password2" name="password2"></br>
+                            <p> </p>
                             <label for="birthday">Birthday:</label>
                             <input type="date" id="birthday" name="birthday"><br/>
                             <p> </p>
                             <label for="email">이메일 입력:</label>
                             <input type="email" id="email" name="email"></br>
                             <p> </p>
-                            <input type="submit" value="확인">
+                            <button type="button"  onclick="myFunction1()">확인</button>
                             <input type="reset" value="취소">
-                            
                         </fieldset>
+
+
                     </p>
+                    <style>
+                        .button1{
+                            border:none;
+                        }
+                    </style>
+    
+                    <script>
+                        function myFunction1(){
+                            let x =document.getElementById("password1").value;
+                            let y = document.getElementById("password2").value;
+                            if (x !== y){
+                                alert("비밀번호가 같지 않습니다");
+                                return false;
+                            }
+                            return true;         
+                        }
+                    </script>
+
+
+
                 </div>
+
             </div>
         </div>
         <!-- Bootstrap core JS-->

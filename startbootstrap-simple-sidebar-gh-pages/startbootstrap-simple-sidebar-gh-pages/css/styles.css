@@ -10922,6 +10922,7 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
     cursor:pointer;
     font-size: 16px;
     font-weight:bold;
+    text-decoration:none;
   }
   .my-button:hover{
     background-color:#0056b3;
@@ -10985,41 +10986,128 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
 }
 
 
-#page-content-wrapper{        /*책 홈*/
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
+
+
+#page-content-wrapper{
+  footer{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    padding: 10px 0;
+    text-align:center;
+    background-color:#f8f9fa;
+    color: #6c757d;
+    
+  }
+}
+
+
+
+#page-content-wrapper{      /*mainhome*/
+
+  .card4{
+    display:inline-flex;
+    margin-left: 20px;
     text-align: center;
+    text-decoration: none;
+    color:inherit;
+    padding:5px;
+  }
+  
+  .card4 img{
+    max-width:300px;
+    height:auto;
+    display:block;
+    border-radius:50%;
+  }
+
+  .btn{
+    display:block;
+    margin-top:10px;
+  
+    padding:5px 10px;
+    color:#fff;
+    text-decoration: none;
+    text-align:center;
+  }
 }
 
-.slider-container {
-    overflow: hidden;
-    margin-top: 20px;
-}
+#page-content-wrapper{     /*북홈*/
+  .card5{
+    display:flex;
+    max-width:100%;
+    margin:20px;
+    padding:20px;
+    border: 1px solid #ccc;
+    border-radius:8px;
+  }
 
-.slider {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
 
-.slide {
-    flex: 0 0 auto;
-    padding: 0 10px;
-    text-align: center;
-}
+  .card5 figure{
+    display:flex;
+    align-items: center;
+  }
+  
+  .card5 figure img{
+    max-width:150px;
+    max-height:300px;
+    height:auto;
+    margin-right:10px;
+    margin-left: 10px;
+  }
 
-.slide img {
+  .card5 p{
+    margin:0;
+    flex:1;
+  }
+
+  .card6{
+    display:flex;
     max-width: 100%;
-    height: auto;
+    margin:20px;
+    padding-top:10px;
+    padding-left:20px;
+    border: 1px solid #ccc;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f0f0f0;
+    color:#333;
+
+  }
+
+  .card6 p{
+    text-align:left;
+
+  }
+
 }
 
-.slide h3 {
-    margin-top: 10px;
-    font-size: 18px;
-    color: #333;
+#page-content-wrapper{
+  .button1{
+    border:none;
+    border-radius:30px;
+  }
 }
 
-}
 
+#page-content-wrapper{      /*mypage*/
+
+  .card8{
+    display:inline-flex;
+    margin-left: 20px;
+    text-align: center;
+    text-decoration: none;
+    color:inherit;
+    padding:5px;
+   
+  }
+  
+  .card8 img{
+    max-width:100px;
+    max-height:100px;
+   
+    display:block;
+    border-radius:50%;
+  }
+
+  
+}

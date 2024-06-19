@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>MEDIA - Minigame</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar-->
+            <div class="border-end bg-white" id="sidebar-wrapper">
+                <div class="sidebar-heading border-bottom bg-light">MEDIA</div>
+                <div class="list-group list-group-flush">
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="moviehome.html">MOVIE</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="dramahome.html">DRAMA</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="bookhome.html">BOOK</a>
+                </div>
+            </div>
+            <!-- Page content wrapper-->
+            <div id="page-content-wrapper">
+                <!-- Top navigation-->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <div class="container-fluid">
+                        <button class="btn btn-primary" id="sidebarToggle">Toggle Menu</button>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                                <li class="nav-item active"><a class="nav-link" href="mainhome.html">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="mypage.html">My Page</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="loginpage.html">로그인하기</a>
+                                        <a class="dropdown-item" href="joinin.html">회원가입하기</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#!">로그아웃하기</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <style>
+                    .rect-container{
+                        display:grid;
+                        grid-template-columns: repeat(4,100px);
+                        grid-template-rows: repeat(4,100px);
+                        gap:10px;
+                    }
+                
+                    .rect1{
+                        background-color: pink;
+                
+                    }
+
+                    .rect1:hover{
+                        background-color:lightblue;
+                        border-radius:50%;
+                        cursor:pointer;
+                    }
+
+                    .rect2{
+                        background-color: pink;
+                
+                    }
+
+                    .rect2:hover{
+                        background-color:lightgoldenrodyellow;
+                        border-radius:50%;
+                        cursor:pointer;
+                    }
+
+                    .rect3{
+                        background-color: pink;
+                
+                    }
+
+                    .rect3:hover{
+                        background-color:lightseagreen;
+                        border-radius:50%;
+                        cursor:pointer;
+                    }
+
+                    .rect4{
+                        background-color: pink;
+                
+                    }
+
+                    .rect4:hover{
+                        background-color:lightgray;
+                        border-radius:50%;
+                        cursor:pointer;
+                    }
+
+                    .rect5{
+                        background-color: pink;
+                
+                    }
+
+                    .rect5:hover{
+                        background-color:lightgreen;
+                        border-radius:50%;
+                        cursor:pointer;
+                    }
+
+                    .rect6{
+                        background-color: pink;
+                
+                    }
+
+                    .rect6:hover{
+                        background-color:peru;
+                        border-radius:50%;
+                        cursor:pointer;
+                    }
+
+                    .rect7{
+                        background-color: pink;
+                
+                    }
+
+                    .rect7:hover{
+                        background-color:violet;
+                        border-radius:50%;
+                        cursor:pointer;
+                    }
+
+                    .rect8{
+                        background-color: pink;
+                
+                    }
+
+                    .rect8:hover{
+                        background-color:olive;
+                        border-radius:50%;
+                        cursor:pointer;
+                    }
+
+                   
+
+
+                
+                </style>  
+
+                <!-- Page content-->
+                <div class="container-fluid">
+                    <h1 class="mt-4">Minigame</h1>
+                    <hr>
+                    <div class="rect-container">
+                        <div class="rect8"></div>
+                        <div class="rect3"></div>
+                        <div class="rect6"></div>
+                        <div class="rect7"></div>
+                        <div class="rect3"></div>
+                        <div class="rect2"></div>
+                        <div class="rect1"></div>
+                        <div class="rect5"></div>
+                        <div class="rect4"></div>
+                        <div class="rect8"></div>
+                        <div class="rect1"></div>
+                        <div class="rect4"></div>
+                        <div class="rect6"></div>
+                        <div class="rect2"></div>
+                        <div class="rect7"></div>
+                        <div class="rect5"></div>
+                    </div>
+                </div>
+
+                <script>
+                   let rectangles = Array.from(document.getElementsByClassName("rect1"));
+                   rectangles = rectangles.concat(Array.from(document.getElementsByClassName("rect2")));
+                   rectangles = rectangles.concat(Array.from(document.getElementsByClassName("rect3")));
+                   rectangles = rectangles.concat(Array.from(document.getElementsByClassName("rect4")));
+                   rectangles = rectangles.concat(Array.from(document.getElementsByClassName("rect5")));
+                   rectangles = rectangles.concat(Array.from(document.getElementsByClassName("rect6")));
+                   rectangles = rectangles.concat(Array.from(document.getElementsByClassName("rect7")));
+                   rectangles = rectangles.concat(Array.from(document.getElementsByClassName("rect8")));
+
+                   // 모든 사각형에 클릭 이벤트 리스너 추가
+                  rectangles.forEach(rect => {
+                    rect.addEventListener("click", function() {
+                        rect.style.backgroundColor = "white";
+                     });
+                });
+                </script>
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

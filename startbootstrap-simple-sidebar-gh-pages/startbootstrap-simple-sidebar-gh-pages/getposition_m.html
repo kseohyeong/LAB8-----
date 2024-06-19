@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>MEDIA - ADD MEDIA</title>
+        <title>MEDIA - 현재 위치 확인</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
@@ -48,52 +48,42 @@
                 </nav>
                 <!-- Page content-->
                 <div class="container-fluid">
-                    <h1 class="mt-4">미디어 추가하기</h1>
-                    <p>관리자 인증 후 미디어 추가가 가능합니다. </p>
+     
+                    <h3>근처 영화관 찾기</h3>
                     <hr>
-                    <p>
-                        <h6>미디어 종류 선택</h6>
-                        <input type="radio" id="movie" name="add_media" value="MOVIE">
-                        <label for="movie">MOVIE</label><br>
-                        <input type="radio" id="drama" name="add_media" value="DRAMA">
-                        <label for="drama">DRAMA</label><br>
-                        <input type="radio" id="book" name="add_media" value="BOOK">
-                        <label for="book">BOOK</label><br>
-                        <p> </p>
-                        
-                        <label for="title">제목 입력: </label>
-                        <input type="text" id="title" name="title"></br>
-                        <p> </p>
+                    <div id="msg">이곳에 위치 정보 출력</div>
+                    <iframe id="map" width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><br/>
 
-                        <label for="myfile">이미지 추가</label>
-                        <input type="file" id="myfile" name="myfile"></br>
-                        <p> </p>
+                    <a id="bigmaplink" target="_blank">새 창에 큰 지도 보기</a>
 
-                        <h6>별점 입력</h6>
-                        <input type="radio" id="1" name="star" value="1">
-                        <label for="1">1</label>
+                    <script>
+                    if(navigator.geolocation)
+                        navigator.geolocation.getCurrentPosition(success);
+                    else
+                        alert("지원하지 않음");
 
-                        <input type="radio" id="2" name="star" value="2">
-                        <label for="2">2</label>
-                        <input type="radio" id="3" name="star" value="3">
-                        <label for="3">3</label>
-                        <input type="radio" id="4" name="star" value="4">
-                        <label for="4">4</label>
-                        <input type="radio" id="5" name="star" value="5">
-                        <label for="5">5</label></br>
-                        <p> </p>
+                    function success(position){
+                        let lat =position.coords.latitude;
+                        let lon = position.coords.longitude;
+                        let acc=position.coords.accuracy;
 
-                        <label for="message">설명:</label>
-                        <textarea id="message" name="message" rows="5" cols="50"></textarea><br>
-                        <p> </p>
+                        lat = lat.toPrecision(6); lon = lon.toPrecision(6);
+                        let now = new Date();
+                        let text="현재 시간" + now.toUTCString()+"<br>";
+                        text+="현재 위치 (위도" + lat + "°, 경도 "+ lon + "° )<br>";
+                        text+="정확도"+acc+"m<br>";
+                        document.getElementById("msg").innerHTML=text;
 
-                        <label for="homepage">사이트 입력:</label>
-                        <input type="url" id="homepage" name="homepage"></br>
-                        <p> </p>
+                        let map = document.getElementById("map");
+                        map.src="https://www.openstreetmap.org/export/embed.html?bbox="+(parseFloat(lon)-0.01)+"%2C"+(parseFloat(lat)-0.01)+"%2C"+(parseFloat(lon)+0.01)+"%2C"+(parseFloat(lat)+0.01);
 
-                        <input type="submit" value="추가하기">
-                        <input type="reset" value="취소">
-                    </p>
+
+                        let maplink=document.getElementById("bigmaplink");
+                        let zoom=15;
+                        maplink.href="https://www.openstreetmap.org/#map="+zoom+"/"+lat+"/"+lon;
+                    }
+                    </script>
+                
                 </div>
             </div>
         </div>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>MEDIA - ADD MEDIA</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar-->
+            <div class="border-end bg-white" id="sidebar-wrapper">
+                <div class="sidebar-heading border-bottom bg-light">MEDIA</div>
+                <div class="list-group list-group-flush">
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="moviehome.html">MOVIE</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="dramahome.html">DRAMA</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="bookhome.html">BOOKS</a>
+                </div>
+            </div>
+            <!-- Page content wrapper-->
+            <div id="page-content-wrapper">
+                <!-- Top navigation-->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <div class="container-fluid">
+                        <button class="btn btn-primary" id="sidebarToggle">Toggle Menu</button>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                                <li class="nav-item active"><a class="nav-link" href="mainhome.html">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="mypage.html">My Page</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login/Logout</a>
+                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="loginpage.html">로그인하기</a>
+                                        <a class="dropdown-item" href="joinin.html">회원가입하기</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#!">로그아웃하기</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+
+                <!-- Page content-->
+
+                <style>
+                    .mypage-container{
+                        display:inline-flex;
+        
+                    }
+                    .card7{
+                        max-width:100%;
+                        display:flex;
+                        margin:20px;
+                        padding:20px;
+                        border: 1px solid #ccc;
+                        border-radius: 8px;
+                        
+                        color:#333;
+                    }
+
+                    .over{
+                        display:flex;
+                        margin:10px 10px;
+                        padding:25px 10px;
+                        border:none;
+                        border-radius:8px;    
+                    }
+                    
+                 
+ 
+    
+                </style>
+                <div class="container-fluid">
+                    <h1 class="mt-4">마이페이지</h1>
+                    <hr>
+                    <div class="mypage-container">
+                        <div class="card4">
+                            <img src="assets\img/smlogo.png">
+                        </div>
+                        <div class="card7">
+                            <figure>
+                                <p><b>이름</b> 눈송이</p>
+                                <p><b>생년월일</b>  1234년 5월 6일 </p>
+                                <p><b>이메일</b> abcdefghi@naver.com </p> 
+                                <p><b>즐겨찾기에 미디어 추가 </b></p>
+                                <form action="">
+                                    <input type="text" id="subject" autofocus>
+                                    <button onclick="newRegister(); return false;">추가</button>                                   
+                                </form>
+                                <hr>
+                                <p><b>내 즐겨찾기</b></p>
+                                <ul id="itemList"></ul>
+                               
+                            </figure>
+                        </div>
+                    </div>
+
+                    <h6></br><b>친구와 공유하기</b></h6>
+                    <div class="card8">
+                        <img src="assets\img/friend1.png">
+                        <button class="over" id="open">친구1</button>
+                        <div id="desc" class="detail" style="display:none;">
+                            <h7>즐겨찾기 목록</h7>
+                            <p>비밀의 숲</p>
+                            <p>눈물의 여왕</p>
+                            <button id="close">닫기</button>
+                        </div> 
+                    </div>
+
+                    <div class="card8">
+                        <img src="assets\img/friend2.png">
+                        <button class="over" id="open2">친구2</button>
+                        <div id="desc2" class="detail" style="display:none;">
+                            <h7>즐겨찾기 목록</h7>
+                            <p>모든 것은 그 자리에</p>
+                            <p>인사이드 아웃2</p>
+                            <button id="close2">닫기</button>
+                        </div> 
+                    </div>
+                    
+                    
+                    <div class="card8">
+                        <img src="assets\img/friend3.png">
+                        <button class="over" id="open3">친구3</button>
+                        <div id="desc3" class="detail" style="display:none;">
+                            <h7>즐겨찾기 목록</h7>
+                            <p>웡카</p>
+                            <p>코렐라인</p>
+                            <button id="close3">닫기</button>
+                        </div> 
+                    </div>
+
+                    <p>   </p>
+                    <p>    </p>
+
+                    <p> <a href="minigame.html" button class="my-button">미니게임하기</button></a>  <a href="attcheck.html" button class="my-button">출석체크하기</button></a></p>
+                    
+                    
+                </div>
+
+                <script>
+                    document.querySelector('#open').onclick=function(){
+                        document.querySelector('#desc').style.display="block";
+                        document.querySelector('#open').style.display="none";
+                    }
+                    document.querySelector('#close').onclick=function(){
+                        document.querySelector('#desc').style.display="none";
+                        document.querySelector('#open').style.display="block";
+                    }
+
+                    document.querySelector('#open2').onclick=function(){
+                        document.querySelector('#desc2').style.display="block";
+                        document.querySelector('#open2').style.display="none";
+                    }
+                    document.querySelector('#close2').onclick=function(){
+                        document.querySelector('#desc2').style.display="none";
+                        document.querySelector('#open2').style.display="block";
+                    }
+
+                    document.querySelector('#open3').onclick=function(){
+                        document.querySelector('#desc3').style.display="block";
+                        document.querySelector('#open3').style.display="none";
+                    }
+                    document.querySelector('#close3').onclick=function(){
+                        document.querySelector('#desc3').style.display="none";
+                        document.querySelector('#open3').style.display="block";
+                    }
+
+
+                    function newRegister(){
+                        var newItem=document.createElement("li");
+                        var subject=document.querySelector("#subject");
+                        var newText=document.createTextNode(subject.value);
+                        newItem.appendChild(newText);
+
+                        var itemList=document.querySelector("#itemList");
+                        itemList.appendChild(newItem);
+
+                        subject.value="";
+                    }
+                </script>
+
+
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+  
+</html>
